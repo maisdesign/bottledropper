@@ -341,7 +341,7 @@
       }
     }
   </style>
-  <script type="module" crossorigin src="./assets/index-BUQV_TLp.js"></script>
+  <script type="module" crossorigin src="./assets/index-CvS-elMH.js"></script>
 <link rel="manifest" href="./manifest.webmanifest"><script id="vite-plugin-pwa:register-sw" src="./registerSW.js"></script></head>
 <body>
   <div class="frame" id="homepage">
@@ -426,7 +426,7 @@
                      display: block;
                    " 
                    onerror="this.style.background='#ff0000'; this.alt='❌ Error loading image';" 
-                   onload="console.log('✅ Charlie loaded');" />
+                   />
               
               <!-- Click hint - always visible on mobile, hover on desktop -->
               <div id="click-hint" style="
@@ -636,11 +636,11 @@
 
     // Game integration functions
     function startGame() {
-      console.log('🎮 startGame called');
+      // startGame called
       
       // Check if user is authenticated
       if (window.authManager && !window.authManager.getState().isAuthenticated) {
-        console.log('⚠️ User not authenticated, showing auth modal');
+        
         
         // Set pending action and show auth modal
         pendingAction = 'startGame';
@@ -650,7 +650,7 @@
             window.homepageAuthModal = new window.AuthModal();
             // Set callback to handle any pending action after successful auth
             window.homepageAuthModal.onAuth((user) => {
-              console.log('✅ Auth successful from homepage, executing pending action:', pendingAction);
+              
               updateAuthStatus(); // Update homepage status
               
               if (pendingAction === 'startGame') {
@@ -691,7 +691,7 @@
       }
       
       // User is authenticated, proceed to game
-      console.log('✅ User authenticated, starting game');
+      
       document.getElementById('homepage').style.display = 'none';
       document.getElementById('game-container').style.display = 'block';
       document.getElementById('home-button').style.display = 'flex';
@@ -708,10 +708,10 @@
         const hasPauseBtn = gameScene && gameScene.textures && gameScene.textures.exists('btn_pause');
         
         if (hasCharlie && hasPauseBtn) {
-          console.log('🎯 Textures ready, starting GameScene directly');
+          // Textures ready, starting GameScene directly
           window.gameInstance.scene.start('GameScene');
         } else {
-          console.log('⚠️ Textures not ready, going through PreloadScene first');
+          
           // Set flag and let PreloadScene handle the transition
           window.skipToGame = true;
           // Make sure we go through PreloadScene to load textures
@@ -720,14 +720,14 @@
           }
         }
       } else {
-        console.log('⚠️ Game instance not ready yet');
+        
         // Set flag to skip menu when game loads
         window.skipToGame = true;
       }
     }
 
     function returnToHomepage() {
-      console.log('🏠 Returning to homepage');
+      // Returning to homepage
       document.getElementById('homepage').style.display = 'grid';
       document.getElementById('game-container').style.display = 'none';
       document.getElementById('home-button').style.display = 'none';
@@ -740,11 +740,11 @@
     }
 
     function showLeaderboard() {
-      console.log('📊 showLeaderboard called');
+      // showLeaderboard called
       
       // Check if user is authenticated 
       if (window.authManager && !window.authManager.getState().isAuthenticated) {
-        console.log('⚠️ User not authenticated for leaderboard');
+        
         
         // Set pending action and show auth modal
         pendingAction = 'showLeaderboard';
@@ -755,7 +755,7 @@
           // Create auth modal if it doesn't exist yet
           window.homepageAuthModal = new window.AuthModal();
           window.homepageAuthModal.onAuth((user) => {
-            console.log('✅ Auth successful from homepage, executing pending action:', pendingAction);
+            
             updateAuthStatus(); // Update homepage status
             
             if (pendingAction === 'startGame') {
@@ -778,24 +778,24 @@
       }
       
       // User is authenticated, proceed to leaderboard
-      console.log('✅ User authenticated, showing leaderboard');
+      
       document.getElementById('homepage').style.display = 'none';
       document.getElementById('game-container').style.display = 'block';
       document.getElementById('home-button').style.display = 'flex';
       
       // Go directly to leaderboard
       if (window.gameInstance) {
-        console.log('📊 Starting LeaderboardScene directly');
+        // Starting LeaderboardScene directly
         window.gameInstance.scene.start('LeaderboardScene');
       } else {
-        console.log('⚠️ Game instance not ready yet');
+        
         // Set flag to go to leaderboard when game loads
         window.skipToLeaderboard = true;
       }
     }
 
     function showHowToPlay() {
-      console.log('❓ showHowToPlay called');
+      
       // Show how to play page instead of modal
       showContentPage('howto');
     }
@@ -912,7 +912,7 @@
       // Update CharacterManager if available
       if (window.characterManager) {
         window.characterManager.selectCharacter(characterId);
-        console.log('✅ Updated CharacterManager with selection:', characterId);
+        
       }
       
       // Update homepage mascot image
@@ -1295,7 +1295,7 @@
         console.log('🔍 Auth system already loaded, checking state:', authState.isAuthenticated);
         
         if (authState.isAuthenticated) {
-          console.log('✅ User already authenticated:', authState.profile?.username);
+          
           // Show profile options instead of starting game
           showUserProfileMenu(authState);
           return;
@@ -1318,7 +1318,7 @@
         
         // Wait for Phaser to load, then handle auth
         setTimeout(() => {
-          console.log('⏰ Checking if AuthModal is now available...');
+          
           if (window.AuthModal && window.authManager) {
             const authState = window.authManager.getState();
             
@@ -1327,20 +1327,20 @@
               const authModal = new window.AuthModal();
               authModal.show();
             } else {
-              console.log('✅ User already authenticated:', authState.profile && authState.profile.username);
+              
               // User logged in during Phaser load, show profile menu
               showUserProfileMenu(authState);
             }
           } else {
-            console.log('❌ AuthModal still not available after Phaser load');
+            
           }
         }, 2000); // Wait 2 seconds for Phaser to initialize
         
       } else {
-        console.log('❌ startGame function not available');
+        
         // Fallback: try to initialize Phaser manually
         import('./assets/main-DBCbLD7O.ts').then(() => {
-          console.log('✅ Phaser loaded via fallback');
+          
           setTimeout(() => {
             if (window.AuthModal) {
               const authModal = new window.AuthModal();
@@ -1393,10 +1393,10 @@
       console.log('🔘 Testing button access...');
       const playBtn = document.querySelector('.btn-primary');
       if (playBtn) {
-        console.log('✅ Play button found:', playBtn);
+        
         playBtn.addEventListener('click', () => console.log('🎮 Play button clicked directly'));
       } else {
-        console.log('❌ Play button not found');
+        
       }
       
       // Update auth status when available
