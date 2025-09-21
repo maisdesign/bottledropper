@@ -1,4 +1,4 @@
-var y=Object.defineProperty;var g=(i,e,a)=>e in i?y(i,e,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[e]=a;var n=(i,e,a)=>(g(i,typeof e!="symbol"?e+"":e,a),a);import{l as h,s as u,a as p}from"./index-ab588333.js";import"./supabase-2481e69c.js";import"./phaser-f8c8a439.js";class w{constructor(){n(this,"modal",null);n(this,"currentView","weekly");n(this,"isLoading",!1);this.createModal(),this.setupEventListeners()}createModal(){this.modal=document.createElement("div"),this.modal.id="leaderboard-modal",this.modal.className="leaderboard-modal",this.modal.style.display="none",this.modal.innerHTML=`
+var y=Object.defineProperty;var g=(i,e,a)=>e in i?y(i,e,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[e]=a;var n=(i,e,a)=>(g(i,typeof e!="symbol"?e+"":e,a),a);import{l as h,s as u,a as p}from"./index-5730f38d.js";import"./supabase-2481e69c.js";import"./phaser-f8c8a439.js";class w{constructor(){n(this,"modal",null);n(this,"currentView","weekly");n(this,"isLoading",!1);this.createModal(),this.setupEventListeners()}createModal(){this.modal=document.createElement("div"),this.modal.id="leaderboard-modal",this.modal.className="leaderboard-modal",this.modal.style.display="none",this.modal.innerHTML=`
       <div class="leaderboard-modal-backdrop"></div>
       <div class="leaderboard-modal-content">
         <button class="leaderboard-close-btn" id="leaderboard-close">&times;</button>
@@ -57,4 +57,4 @@ var y=Object.defineProperty;var g=(i,e,a)=>e in i?y(i,e,{enumerable:!0,configura
         <button onclick="location.reload()" class="retry-btn">🔄 Riprova</button>
       </div>
     `,e.style.display="block"}show(){this.modal&&(this.modal.style.display="flex",this.updateTranslations(),this.loadLeaderboard(),console.log("🏆 Leaderboard modal opened"))}hide(){this.modal&&(this.modal.style.display="none",console.log("🏆 Leaderboard modal closed"))}destroy(){this.modal&&(this.modal.remove(),this.modal=null)}}export{w as LeaderboardModal};
-//# sourceMappingURL=LeaderboardModal-459a627a.js.map
+//# sourceMappingURL=LeaderboardModal-0d1809eb.js.map
