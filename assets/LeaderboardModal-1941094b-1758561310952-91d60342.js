@@ -1,4 +1,4 @@
-import{u as c,e as h,y}from"./index-1758560864772-c23ce77d.js";import"./supabase-1758560864772-cf010ec4.js";var v=Object.defineProperty,p=(i,e,a)=>e in i?v(i,e,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[e]=a,b=(i,e,a)=>(p(i,typeof e!="symbol"?e+"":e,a),a);class k{constructor(){b(this,"modal",null),b(this,"currentView","weekly"),b(this,"isLoading",!1),this.createModal(),this.setupEventListeners()}createModal(){this.modal=document.createElement("div"),this.modal.id="leaderboard-modal",this.modal.className="leaderboard-modal",this.modal.style.display="none",this.modal.innerHTML=`
+import{u as c,e as h,y}from"./index-1758561310952-3bfb6f00.js";import"./supabase-1758561310952-cf010ec4.js";var v=Object.defineProperty,p=(i,e,a)=>e in i?v(i,e,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[e]=a,b=(i,e,a)=>(p(i,typeof e!="symbol"?e+"":e,a),a);class k{constructor(){b(this,"modal",null),b(this,"currentView","weekly"),b(this,"isLoading",!1),this.createModal(),this.setupEventListeners()}createModal(){this.modal=document.createElement("div"),this.modal.id="leaderboard-modal",this.modal.className="leaderboard-modal",this.modal.style.display="none",this.modal.innerHTML=`
       <div class="leaderboard-modal-backdrop"></div>
       <div class="leaderboard-modal-content">
         <button class="leaderboard-close-btn" id="leaderboard-close">&times;</button>
@@ -57,4 +57,4 @@ import{u as c,e as h,y}from"./index-1758560864772-c23ce77d.js";import"./supabase
         <button onclick="location.reload()" class="retry-btn">🔄 Riprova</button>
       </div>
     `,e.style.display="block"}show(){this.modal&&(this.modal.style.display="flex",this.updateTranslations(),this.loadLeaderboard(),console.log("🏆 Leaderboard modal opened"))}hide(){this.modal&&(this.modal.style.display="none",console.log("🏆 Leaderboard modal closed"))}destroy(){this.modal&&(this.modal.remove(),this.modal=null)}}export{k as LeaderboardModal};
-//# sourceMappingURL=LeaderboardModal-1941094b-1758560864772-0a8429c8.js.map
+//# sourceMappingURL=LeaderboardModal-1941094b-1758561310952-91d60342.js.map
