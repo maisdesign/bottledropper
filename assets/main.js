@@ -6589,4 +6589,3 @@ Option 2: Install and provide the "ws" package:
         <button onclick="location.reload()" class="retry-btn">🔄 Riprova</button>
       </div>
     `,_.style.display="block"}show(){this.modal&&(this.modal.style.display="flex",this.updateTranslations(),this.loadLeaderboard(),console.log("🏆 Leaderboard modal opened"))}hide(){this.modal&&(this.modal.style.display="none",console.log("🏆 Leaderboard modal closed"))}destroy(){this.modal&&(this.modal.remove(),this.modal=null)}}const Gn=Object.freeze(Object.defineProperty({__proto__:null,LeaderboardModal:Xn},Symbol.toStringTag,{value:"Module"}));
-//# sourceMappingURL=index-56753234.js.map
